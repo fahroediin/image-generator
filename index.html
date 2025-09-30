@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator - Hugging Face</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Modal untuk memasukkan API Key -->
+    <div id="api-key-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>🤗 Masukkan Hugging Face Token</h2>
+            <p>
+                Token Anda akan disimpan di browser dan digunakan untuk generate gambar menggunakan Stable Diffusion XL.
+            </p>
+            <p style="margin-top: 15px; font-size: 0.9rem;">
+                <strong>Belum punya token?</strong><br>
+                1. Kunjungi <a href="https://huggingface.co/settings/tokens" target="_blank" style="color: var(--primary-color);">huggingface.co/settings/tokens</a><br>
+                2. Klik "New token"<br>
+                3. Pilih "Read" access<br>
+                4. Copy dan paste di sini (GRATIS!)
+            </p>
+            <form id="api-key-form">
+                <input 
+                    type="password" 
+                    id="api-key-input" 
+                    placeholder="hf_xxxxxxxxxxxxxxxxxxxxxxxxxx" 
+                    required
+                    pattern="hf_.*"
+                    title="Token Hugging Face harus dimulai dengan 'hf_'"
+                >
+                <button type="submit">Simpan & Mulai Generate</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Konten Utama Aplikasi -->
+    <main class="container hidden" id="main-content">
+        <header>
+            <div class="header-content">
+                <h1>🎨 AI Image Generator</h1>
+                <p>Powered by Stable Diffusion XL via Hugging Face</p>
+            </div>
+            <button id="logout-btn">Ganti Token</button>
+        </header>
+
+        <form id="prompt-form">
+            <textarea 
+                id="prompt-input" 
+                placeholder="Contoh: A majestic dragon flying over a mystical mountain landscape at sunset, highly detailed, fantasy art style" 
+                required
+            ></textarea>
+            
+            <!-- Image Count Selector -->
+            <div class="settings-row">
+                <label for="image-count">
+                    <span class="label-text">Jumlah Gambar:</span>
+                    <span class="label-value" id="count-display">4</span>
+                </label>
+                <input 
+                    type="range" 
+                    id="image-count" 
+                    min="1" 
+                    max="8" 
+                    value="4"
+                    class="slider"
+                >
+                <div class="count-buttons">
+                    <button type="button" class="count-btn" data-value="1">1</button>
+                    <button type="button" class="count-btn" data-value="2">2</button>
+                    <button type="button" class="count-btn" data-value="4">4</button>
+                    <button type="button" class="count-btn" data-value="6">6</button>
+                    <button type="button" class="count-btn" data-value="8">8</button>
+                </div>
+            </div>
+
+            <button type="submit" id="generate-btn">
+                <span class="btn-text">🎨 Generate Images</span>
+                <div class="spinner" style="display: none;"></div>
+            </button>
+        </form>
+
+        <section id="gallery-wrapper">
+            <h2>Hasil Gambar</h2>
+            <div id="image-gallery" class="gallery-grid">
+                <div class="placeholder">
+                    ✨ Masukkan prompt untuk mulai generate gambar...<br>
+                    <small style="opacity: 0.7; margin-top: 10px; display: block;">
+                        Tips: Gunakan deskripsi detail dalam bahasa Inggris untuk hasil terbaik
+                    </small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
