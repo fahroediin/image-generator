@@ -8,7 +8,7 @@
 
 **Generate stunning AI images using Stable Diffusion XL via Hugging Face API**
 
-[Features](#-features) • [Demo](#-demo) • [Installation](#-installation) • [Usage](#-usage) • [API](#-api-reference)
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [API](#-api-reference)
 
 </div>
 
@@ -18,7 +18,6 @@
 
 - [Overview](#-overview)
 - [Features](#-features)
-- [Demo](#-demo)
 - [Prerequisites](#-prerequisites)
 - [Installation](#-installation)
 - [Configuration](#-configuration)
@@ -73,19 +72,6 @@ AI Image Generator adalah aplikasi web modern yang memungkinkan Anda menghasilka
 
 ---
 
-## 🎬 Demo
-
-### Desktop View
-![Desktop Demo](https://via.placeholder.com/800x450/1e1e1e/8a2be2?text=Desktop+View)
-
-### Mobile View
-![Mobile Demo](https://via.placeholder.com/400x800/1e1e1e/8a2be2?text=Mobile+View)
-
-### Generated Images
-![Sample Output](https://via.placeholder.com/600x300/1e1e1e/8a2be2?text=AI+Generated+Images)
-
----
-
 ## 📦 Prerequisites
 
 Sebelum memulai, pastikan Anda memiliki:
@@ -102,8 +88,8 @@ Sebelum memulai, pastikan Anda memiliki:
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/ai-image-generator.git
-cd ai-image-generator
+git clone https://github.com/fahroediin/image-generator.git
+cd image-generator
 ```
 
 ### 2. Install Dependencies
@@ -197,7 +183,7 @@ Gunakan button 1, 2, 4, 6, atau 8 untuk cepat memilih jumlah gambar tanpa slider
 ## 📁 Project Structure
 
 ```
-ai-image-generator/
+image-generator/
 ├── server.js              # Express server & API logic
 ├── index.html             # Main HTML file
 ├── style.css              # Responsive CSS styling
@@ -479,13 +465,13 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 ### Author
 
 - **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [@fahroediin](https://github.com/fahroediin)
+- Email: imam.fahrudin.work@gmail.com
 
 ### Support
 
-- 🐛 [Report Bugs](https://github.com/yourusername/ai-image-generator/issues)
-- 💬 [Discussions](https://github.com/yourusername/ai-image-generator/discussions)
+- 🐛 [Report Bugs](https://github.com/fahroediin/image-generator/issues)
+- 💬 [Discussions](https://github.com/fahroediin/image-generator/discussions)
 - ⭐ Star this repo if you find it helpful!
 
 ---
@@ -512,9 +498,9 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 ## 📊 Stats
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/ai-image-generator?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/ai-image-generator?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/yourusername/ai-image-generator?style=social)
+![GitHub stars](https://img.shields.io/github/stars/fahroediin/image-generator?style=social)
+![GitHub forks](https://img.shields.io/github/forks/fahroediin/image-generator?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/fahroediin/image-generator?style=social)
 
 ---
 
@@ -522,6 +508,6 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 **Made with ❤️ by [Your Name]**
 
-[⬆ Back to Top](#-ai-image-generator---hugging-face-edition)
+[⬆ Back to Top](#-image-generator---hugging-face-edition)
 
 </div>
